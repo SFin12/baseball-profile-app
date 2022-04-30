@@ -1,0 +1,13 @@
+.custom-footer-container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+    background-color: var(--angels-maroon);
+}
+
+.blue {
+    background-color: var(--angles-blue);
+}

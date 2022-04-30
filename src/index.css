@@ -1,3 +1,11 @@
+/*------------------------CSS Variables------------------------------ */
+:root {
+    --angles-blue: rgb(0, 50, 99);
+    --angels-red: rgb(186, 0, 33);
+    --angels-maroon: rgb(134, 38, 51);
+    --angels-silver: rgb(196, 206, 212);
+}
+
 /* --------------------------CSS RESET-------------------------------- */
 /* Box sizing rules */
 *,
