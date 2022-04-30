@@ -13,8 +13,8 @@ export default function Navbar() {
                     alt="Los Angeles Angels Logo"
                 />
             </span>
-            <span className="d-flex align-items-center">
-                <Link to={"/"} className="tab maroon">
+            <span className="d-flex align-items-center px-3">
+                <Link to={"/main"} className="tab maroon">
                     <div>Home</div>
                 </Link>
                 <Link to={"/stats"} className="tab maroon">

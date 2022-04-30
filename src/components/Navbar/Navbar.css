@@ -6,6 +6,8 @@
     width: 100%;
     height: 70px;
     background-color: var(--angles-blue);
+    border-bottom: 10px solid var(--angels-maroon);
+    z-index: 10;
 }
 
 .logo {
@@ -19,16 +21,17 @@
 
 .tab {
     display: flex;
+    align-self: flex-end;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: white;
     padding: 8px;
-    height: 100%;
+    height: 50px;
     transform: skew(-20deg);
-    width: 70px;
-    margin: 0px 5px;
-    font-size: 2rem;
+    font-size: 1rem;
+    width: 80px;
+    margin: 0px 8px;
 }
 
 .maroon {
@@ -40,15 +43,19 @@
     color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
     .custom-navbar-container {
         height: 90px;
         justify-content: center;
+        border-color: var(--angels-maroon);
     }
     .logo {
         max-width: 80px;
     }
     .tab {
         width: 200px;
+        font-size: 1.5rem;
+        margin: 0px 10px;
+        height: 60px;
     }
 }

@@ -1,13 +1,25 @@
 .custom-footer-container {
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     height: 70px;
     width: 100%;
     background-color: var(--angels-maroon);
+    border-top: 10px solid var(--angles-blue);
+    overflow-y: hidden;
+}
+
+footer .tab {
+    align-self: baseline;
 }
 
 .blue {
     background-color: var(--angles-blue);
+}
+
+@media (min-width: 830px) {
+    .custom-footer-container {
+        height: 90px;
+    }
 }
