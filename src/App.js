@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, useNavigate } from "react-router-dom";
+import "./App.css";
+import SignInView from "./views/SignInView/SignInView";
+import MainView from "./views/MainView/MainView";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    function handleChange(e) {
+        const name = e.target.name;
+        const value = e.target.value;
+        if (name === "username") {
+            setUsername(value);
+        } else {
+            setPassword(value);
+        }
+    }
+
+    function resetSignInForm() {
+        setUsername("");
+        setPassword("");
+    }
+
+    function handleLogin(e) {
+        e.preventDefault();
+        // Check to make sure someting is filled out to login.  Any username and password will work.
+        if (username && password) {
+            console.log("Successful login");
+            navigate("/main");
+        } else {
+            console.log("Failed to login");
+        }
+        resetSignInForm();
+    }
+
+    return (
+        <div className="App">
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <SignInView
+                            username={username}
+                            password={password}
+                            handleChange={handleChange}
+                            handleLogin={handleLogin}
+                        />
+                    }
+                ></Route>
+                <Route path="/main/*" element={<MainView />}></Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
