@@ -1,19 +1,20 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+
 .App {
     text-align: center;
-    height: 155vh;
-    background-image: url("assets/baseball-field-background.jpg");
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
+    background-color: grey;
 }
 
-@media (min-width: 380px) {
+@media (min-width: 899px) {
     .App {
-        height: 142vh;
-    }
-}
-
-@media (min-width: 768px) {
-    .App {
+        background-image: url("assets/baseball-field-background.jpg");
+        background-size: cover;
         height: 100vh;
     }
 }

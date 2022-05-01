@@ -11,6 +11,7 @@
     overflow-x: hidden;
 }
 
+/* footer uses the same tab class used in the navbar.css */
 footer .tab {
     align-self: baseline;
 }
@@ -19,7 +20,7 @@ footer .tab {
     background-color: var(--angles-blue);
 }
 
-@media (min-width: 830px) {
+@media (min-width: 899px) {
     .custom-footer-container {
         height: 90px;
     }

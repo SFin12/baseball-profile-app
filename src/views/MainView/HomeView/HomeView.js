@@ -5,8 +5,6 @@ import "./HomeView.css";
 import { Col, Container, Row } from "react-bootstrap";
 
 export default function HomeView({ username }) {
-    const stats = { Hits: 9, Walks: 10, Runs: 29, "Stolen Bases": 6 };
-
     return (
         <>
             <h1 className="text-white">{username || "Michael Lorenzen"}</h1>
@@ -44,7 +42,7 @@ export default function HomeView({ username }) {
                     </p>
                 </Card>
                 <Card textColor="white" background="rgb(134, 38, 51)">
-                    <h3 className="mb-5">Statistics</h3>
+                    <h3 className="mb-5">Personal Stats</h3>
 
                     <div className="w-100">
                         <Row xs={3}>
