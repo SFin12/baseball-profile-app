@@ -33,7 +33,7 @@ function App() {
         } else {
             console.log("Failed to login");
         }
-        resetSignInForm();
+        // resetSignInForm();
     }
 
     return (
@@ -50,7 +50,10 @@ function App() {
                         />
                     }
                 ></Route>
-                <Route path="/main/*" element={<MainView />}></Route>
+                <Route
+                    path="/main/*"
+                    element={<MainView username={username} />}
+                ></Route>
             </Routes>
         </div>
     );

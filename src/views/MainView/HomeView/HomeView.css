@@ -1,2 +1,13 @@
 .home-container {
 }
+
+.profile-image {
+    max-width: 40vh;
+    height: auto;
+    border-radius: 5px;
+}
+
+.team-name {
+    text-decoration: none;
+    color: var(--angles-blue);
+}

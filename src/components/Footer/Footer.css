@@ -1,13 +1,14 @@
 .custom-footer-container {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     height: 70px;
     width: 100%;
     background-color: var(--angels-maroon);
     border-top: 10px solid var(--angles-blue);
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 footer .tab {

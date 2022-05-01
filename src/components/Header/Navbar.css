@@ -8,6 +8,8 @@
     background-color: var(--angles-blue);
     border-bottom: 10px solid var(--angels-maroon);
     z-index: 10;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .logo {
@@ -46,7 +48,7 @@
 @media (min-width: 830px) {
     .custom-navbar-container {
         height: 90px;
-        justify-content: center;
+        justify-content: end;
         border-color: var(--angels-maroon);
     }
     .logo {

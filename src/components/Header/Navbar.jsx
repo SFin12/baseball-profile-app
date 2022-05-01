@@ -17,10 +17,10 @@ export default function Navbar() {
                 <Link to={"/main"} className="tab maroon">
                     <div>Home</div>
                 </Link>
-                <Link to={"/stats"} className="tab maroon">
+                <Link to={"/main/stats"} className="tab maroon">
                     <div>Stats</div>
                 </Link>
-                <Link to={"/training"} className="tab maroon">
+                <Link to={"/main/training"} className="tab maroon">
                     <div>Training</div>
                 </Link>
             </span>

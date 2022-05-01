@@ -1,4 +1,19 @@
 .App {
     text-align: center;
-    height: 100vh;
+    height: 155vh;
+    background-image: url("assets/baseball-field-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 380px) {
+    .App {
+        height: 142vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .App {
+        height: 100vh;
+    }
 }

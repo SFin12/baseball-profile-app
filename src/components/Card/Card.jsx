@@ -3,5 +3,14 @@ import "./Card.css";
 
 export default function Card(props) {
     const children = props.children;
-    return <div className="card">{children}</div>;
+    const backgroundColor = props.background;
+    const color = props.textColor;
+    return (
+        <div
+            className="card"
+            style={{ backgroundColor: `${backgroundColor}`, color: `${color}` }}
+        >
+            {children}
+        </div>
+    );
 }
