@@ -3,10 +3,17 @@
 
 .profile-image {
     height: auto;
+    max-height: 30vh;
     border-radius: 5px;
 }
 
 .team-name {
     text-decoration: none;
     color: white;
+}
+
+@media (max-height: 450px) {
+    .profile-image {
+        max-height: none;
+    }
 }

@@ -13,7 +13,7 @@ export default function SignInView({
         <div className="d-flex align-items-center justify-content-center vh-100">
             {/* Custom card component not bootstrap component */}
             <Card>
-                <h1>Baseball Profile</h1>
+                <h2 className="text-dark mx-5">Baseball Profile</h2>
                 <form className="d-flex flex-column" onSubmit={handleLogin}>
                     <label>Username</label>
                     <FormControl

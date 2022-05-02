@@ -18,7 +18,10 @@ export default function MainView({ username }) {
                         element={<HomeView username={username} />}
                     ></Route>
                     <Route path="/stats" element={<StatsView />}></Route>
-                    <Route path="/training" element={<TrainingView />}></Route>
+                    <Route
+                        path="/training/*"
+                        element={<TrainingView />}
+                    ></Route>
                 </Routes>
             </div>
             <Footer />

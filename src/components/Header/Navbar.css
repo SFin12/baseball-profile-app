@@ -7,9 +7,9 @@
     height: 70px;
     background-color: var(--angles-blue);
     border-bottom: 10px solid var(--angels-maroon);
-    overflow-x: hidden;
-    overflow-y: hidden;
-    z-index: 10;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+    z-index: 5;
 }
 
 .logo {
@@ -34,6 +34,7 @@
     font-size: 1rem;
     width: 80px;
     margin: 0px 8px;
+    z-index: 10;
 }
 
 .maroon {
