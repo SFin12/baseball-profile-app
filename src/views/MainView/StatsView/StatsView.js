@@ -1,18 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { stats } from "../../../data/data";
 import { nanoid } from "nanoid";
 import "./StatsView.css";
 
 export default function StatsView() {
-    const [sortBy, setSortBy] = useState();
+    const [topTen, setTopTen] = useState([]);
 
     // create soreted array based based on most hits.
-    const sortedStats = stats.sort((current, next) => next.Hits - current.Hits);
-    const topTen = sortedStats.slice(0, 10);
+    function sortStats(type = "Hits") {
+        console.log(typeof stats[0][type]);
+        let sortedStats = [];
+        if (stats.length === 0) {
+            return;
+        }
+        if (typeof stats[0][type] === "number") {
+            sortedStats = stats.sort(
+                (current, next) => next[type] - current[type]
+            );
+        } else {
+            sortedStats = stats.sort((current, next) => {
+                const nameA = current[type].toUpperCase(); // ignore upper and lowercase
+                const nameB = next[type].toUpperCase(); // ignore upper and lowercase
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+
+                // names must be equal
+                return 0;
+            });
+        }
+
+        const sortedTopTen = sortedStats.slice(0, 10);
+        setTopTen(sortedTopTen);
+    }
+
+    useEffect(() => {
+        sortStats();
+    }, []);
 
     function handleSort(e) {
-        console.log(e.target.title);
+        sortStats(e.target.title);
     }
 
     return (
@@ -31,13 +62,21 @@ export default function StatsView() {
                         <thead>
                             <tr>
                                 <th>Rank</th>
-                                <th onClick={handleSort} title="name">
+                                <th onClick={handleSort} title="Name">
                                     Player Name
                                 </th>
-                                <th>Hits</th>
-                                <th>Walks</th>
-                                <th>Runs</th>
-                                <th>Stolen Bases</th>
+                                <th onClick={handleSort} title="Hits">
+                                    Hits
+                                </th>
+                                <th onClick={handleSort} title="Walks">
+                                    Walks
+                                </th>
+                                <th onClick={handleSort} title="Runs">
+                                    Runs
+                                </th>
+                                <th onClick={handleSort} title="Stolen_Bases">
+                                    Stolen Bases
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
