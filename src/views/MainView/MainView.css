@@ -5,6 +5,10 @@
     padding: 70px 0px;
 }
 
+iframe {
+    aspect-ratio: 16/9;
+}
+
 @media (min-width: 899px) {
     .main-view-container {
         padding: 90px 0px;

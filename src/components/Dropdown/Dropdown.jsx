@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Dropdown.css";
 
@@ -11,7 +11,7 @@ export default function Dropdown({ closeDropdown }) {
                         to={"/main/training/hitting"}
                         className="dropdown-link"
                     >
-                        Hitting tutorials
+                        Hitting
                     </Link>
                 </div>
                 <div>
@@ -19,7 +19,7 @@ export default function Dropdown({ closeDropdown }) {
                         to={"/main/training/base-running"}
                         className="dropdown-link"
                     >
-                        Base Running tutorials
+                        Base Running
                     </Link>
                 </div>
             </div>

@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table } from "react-bootstrap";
 import { stats } from "../../../data/data";
 import { nanoid } from "nanoid";
 import "./StatsView.css";
 
 export default function StatsView() {
+    const [sortBy, setSortBy] = useState();
+
     // create soreted array based based on most hits.
     const sortedStats = stats.sort((current, next) => next.Hits - current.Hits);
     const topTen = sortedStats.slice(0, 10);
+
+    function handleSort(e) {
+        console.log(e.target.title);
+    }
 
     return (
         <>
@@ -25,7 +31,9 @@ export default function StatsView() {
                         <thead>
                             <tr>
                                 <th>Rank</th>
-                                <th>Player Name</th>
+                                <th onClick={handleSort} title="name">
+                                    Player Name
+                                </th>
                                 <th>Hits</th>
                                 <th>Walks</th>
                                 <th>Runs</th>

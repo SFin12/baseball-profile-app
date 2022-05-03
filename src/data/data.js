@@ -144,3 +144,66 @@ export const stats = [
         Stolen_Bases: 17,
     },
 ];
+
+export const tutorials = [
+    {
+        type: "hitting",
+        module: 1,
+        url: "https://www.youtube.com/embed/SkLvrOJQQHc",
+    },
+    {
+        type: "hitting",
+        module: 2,
+        url: "https://www.youtube.com/embed/Naa8_IdwEmU",
+    },
+    {
+        type: "hitting",
+        module: 3,
+        url: "https://www.youtube.com/embed/aaPd2PjvuFs",
+    },
+    {
+        type: "hitting",
+        module: 4,
+        url: "https://www.youtube.com/embed/tsZGog9xn5Y",
+    },
+    {
+        type: "hitting",
+        module: 5,
+        url: "https://www.youtube.com/embed/s-DG8YPap7s",
+    },
+    {
+        type: "hitting",
+        module: 6,
+        url: "https://www.youtube.com/embed/OLtC23e1UG8",
+    },
+    {
+        type: "running",
+        module: 6,
+        url: "https://www.youtube.com/embed/k9ihDpMSAdM",
+    },
+    {
+        type: "running",
+        module: 5,
+        url: "https://www.youtube.com/embed/zmcNJSjWp78",
+    },
+    {
+        type: "running",
+        module: 4,
+        url: "https://www.youtube.com/embed/1Jzc_EJqT30",
+    },
+    {
+        type: "running",
+        module: 3,
+        url: "https://www.youtube.com/embed/ZdVx7F1z8GU",
+    },
+    {
+        type: "running",
+        module: 2,
+        url: "https://www.youtube.com/embed/rPAj3DIlilA",
+    },
+    {
+        type: "running",
+        module: 1,
+        url: "https://www.youtube.com/embed/CSUQzUZrgvA",
+    },
+];

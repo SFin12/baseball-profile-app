@@ -3,10 +3,10 @@
     position: absolute;
     top: 60px;
     min-width: 150px;
-    right: 3px;
+    right: 2px;
     width: fit-content;
     padding: 4px;
-    background-color: black;
+    background-color: var(--angels-red);
     color: white;
     z-index: 20;
     /* transform: scale(); */

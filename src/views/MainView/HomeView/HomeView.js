@@ -24,19 +24,19 @@ export default function HomeView({ username }) {
                     <hr color="rgba(255,255,255,.5)" width="70%" />
                     <p>
                         <span>
-                            <h5 className="d-inline-block">Born: </h5> 1/04/1992
-                            in Anaheim, CA
+                            <div className="d-inline-block bold">Born: </div>{" "}
+                            1/04/1992 in Anaheim, CA
                         </span>
                     </p>
                     <p>
                         <span>
-                            <h5 className="d-inline-block">Draft: </h5> 2013,
-                            Overall Pick: 38
+                            <div className="d-inline-block bold">Draft: </div>{" "}
+                            2013, Overall Pick: 38
                         </span>
                     </p>
                     <p>
                         <span>
-                            <h5 className="d-inline-block">Debut: </h5>{" "}
+                            <div className="d-inline-block bold">Debut: </div>{" "}
                             4/29/2015
                         </span>
                     </p>
@@ -120,7 +120,7 @@ export default function HomeView({ username }) {
                                     </h5>
                                 </span>
                             </Col>
-                            <Col>
+                            <Col className="justify-content-end">
                                 <span>
                                     <p className="d-inline-block">15</p>
                                 </span>

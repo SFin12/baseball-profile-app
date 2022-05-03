@@ -9,6 +9,12 @@
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     max-height: 90%;
     margin: 10px;
-    max-width: 429px;
+    max-width: 386px;
     z-index: 0 !important;
+}
+
+@media (min-width: 1400px) {
+    .custom-card {
+        max-width: 429px;
+    }
 }

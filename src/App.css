@@ -18,3 +18,8 @@ h1 {
         height: 100vh;
     }
 }
+
+.bold {
+    font-weight: 600;
+    font-size: larger;
+}
