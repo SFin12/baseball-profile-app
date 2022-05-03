@@ -1,6 +1,8 @@
 import React from "react";
 import { tutorials } from "../data/data";
 import { nanoid } from "nanoid";
+import { Col, Row } from "react-bootstrap";
+import "./TutorialsLayout.css";
 
 export default function TutorialsLayout({ type, moduleName }) {
     // only get the hitting tutorials and sort them from first to last by their order.
@@ -9,34 +11,45 @@ export default function TutorialsLayout({ type, moduleName }) {
         .sort((current, next) => current.module - next.module);
 
     return (
-        <div>
-            <h1 className="mt-3">{moduleName} Tutorials</h1>
-            <section className="d-flex justify-content-around flex-wrap align-items-center h-100">
-                {sortedTutorials.map((tutorial, i) => {
-                    if (i < 6) {
-                        return (
-                            <div
-                                className="m-3 maroon text-white"
-                                key={nanoid()}
-                            >
-                                <iframe
-                                    width={350}
-                                    src={tutorial.url}
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    title={
-                                        "Embedded youtube " + tutorial.module
-                                    }
-                                />
-                                <h4>
-                                    {moduleName} Module {tutorial.module}
-                                </h4>
-                            </div>
-                        );
-                    }
-                    return null;
-                })}
+        <div className="tutorials-container">
+            <h1 className="pt-3">{moduleName} Tutorials</h1>
+            <section className="container d-flex justify-content-center flex-wrap align-items-center h-100 w-100 ">
+                <Row
+                    lg={3}
+                    md={2}
+                    sm={2}
+                    xs={1}
+                    className="text-center mb-md-5"
+                >
+                    {sortedTutorials.map((tutorial, i) => {
+                        if (i < 6) {
+                            return (
+                                <Col>
+                                    <div
+                                        className="m-3 text-white"
+                                        key={nanoid()}
+                                    >
+                                        <iframe
+                                            src={tutorial.url}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            title={
+                                                "Embedded youtube " +
+                                                tutorial.module
+                                            }
+                                        />
+                                        <div className="tutorial-module">
+                                            {moduleName} Module{" "}
+                                            {tutorial.module}
+                                        </div>
+                                    </div>
+                                </Col>
+                            );
+                        }
+                        return null;
+                    })}
+                </Row>
             </section>
         </div>
     );
