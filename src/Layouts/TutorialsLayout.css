@@ -13,9 +13,13 @@ iframe {
     background-color: var(--angels-maroon);
 }
 
-@media (min-width: 300px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .tutorials-container {
         background-image: url("../assets/baseball-field-background.jpg");
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: 90vh;
     }
 }

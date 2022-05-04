@@ -6,6 +6,7 @@ import "./StatsView.css";
 
 export default function StatsView({ activateTab }) {
     const [topTen, setTopTen] = useState([]);
+    const [type, setType] = useState("Hits");
 
     useEffect(() => {
         activateTab("stats");
@@ -13,6 +14,7 @@ export default function StatsView({ activateTab }) {
 
     // create soreted array based based on most hits.
     function sortStats(type = "Hits") {
+        setType(type);
         let sortedStats = [];
         if (stats.length === 0) {
             return;
@@ -51,7 +53,8 @@ export default function StatsView({ activateTab }) {
 
     return (
         <>
-            <h1 className="mb-3 mt-3">Top 10 Players</h1>
+            <h1 className="mb-1 mt-3">Top 10 Players</h1>
+            <p className="text-white">(By {type})</p>
             <section className="stats-container d-flex  justify-content-center">
                 <div className="table-container">
                     <Table

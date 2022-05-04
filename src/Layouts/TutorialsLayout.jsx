@@ -17,7 +17,7 @@ export default function TutorialsLayout({ type, moduleName, activateTab }) {
 
     return (
         <div className="tutorials-container">
-            <h1 className="pt-3">{moduleName} Tutorials</h1>
+            <h1 className="pt-3 mt-md-3 mt-lg-1">{moduleName} Tutorials</h1>
             <section className="container d-flex justify-content-center flex-wrap align-items-center h-100 w-100 ">
                 <Row
                     lg={3}

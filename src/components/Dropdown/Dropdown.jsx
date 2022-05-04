@@ -11,7 +11,7 @@ export default function Dropdown({ closeDropdown }) {
                         to={"/main/training/hitting"}
                         className="dropdown-link"
                     >
-                        Hitting
+                        Hitting Practice
                     </Link>
                 </div>
                 <div>
@@ -19,7 +19,7 @@ export default function Dropdown({ closeDropdown }) {
                         to={"/main/training/base-running"}
                         className="dropdown-link"
                     >
-                        Base Running
+                        Base Running Practice
                     </Link>
                 </div>
             </div>

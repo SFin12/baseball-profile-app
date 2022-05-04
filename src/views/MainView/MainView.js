@@ -34,7 +34,6 @@ export default function MainView({ username }) {
     function showActiveTab(activeTab) {
         // active tag will be a string with "home", "stats", "training", or "".
         setActiveTab(activeTab);
-        console.log(activeTab);
     }
 
     return (
