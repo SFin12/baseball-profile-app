@@ -10,3 +10,15 @@
         padding: 90px 0px;
     }
 }
+
+.maroon {
+    background-color: var(--angels-maroon);
+}
+
+.blue {
+    background-color: var(--angles-blue);
+}
+
+.active {
+    background-color: var(--angels-red);
+}

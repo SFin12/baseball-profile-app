@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { tutorials } from "../data/data";
 import { nanoid } from "nanoid";
 import { Col, Row } from "react-bootstrap";
 import "./TutorialsLayout.css";
 
-export default function TutorialsLayout({ type, moduleName }) {
+export default function TutorialsLayout({ type, moduleName, activateTab }) {
+    // set to active tab
+    useEffect(() => {
+        activateTab("training");
+    }, []);
+
     // only get the hitting tutorials and sort them from first to last by their order.
     const sortedTutorials = tutorials
         .filter((tutorial) => tutorial.type === type)
@@ -24,11 +29,8 @@ export default function TutorialsLayout({ type, moduleName }) {
                     {sortedTutorials.map((tutorial, i) => {
                         if (i < 6) {
                             return (
-                                <Col>
-                                    <div
-                                        className="m-3 text-white"
-                                        key={nanoid()}
-                                    >
+                                <Col key={nanoid()}>
+                                    <div className="m-3 text-white">
                                         <iframe
                                             src={tutorial.url}
                                             frameBorder="0"

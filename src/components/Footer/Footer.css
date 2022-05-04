@@ -16,10 +16,6 @@ footer .tab {
     align-self: baseline;
 }
 
-.blue {
-    background-color: var(--angles-blue);
-}
-
 @media (min-width: 899px) {
     .custom-footer-container {
         height: 90px;

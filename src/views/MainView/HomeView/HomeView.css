@@ -10,6 +10,14 @@
 .team-name {
     text-decoration: none;
     color: white;
+    width: fit-content;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.team-name:hover {
+    text-decoration: underline;
+    color: var(--angels-red);
 }
 
 @media (max-height: 450px) {

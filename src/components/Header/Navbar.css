@@ -6,10 +6,15 @@
     width: 100%;
     height: 70px;
     background-color: var(--angles-blue);
-    border-bottom: 10px solid var(--angels-maroon);
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
     z-index: 5;
+}
+
+.active-border {
+    border-bottom: 10px solid var(--angels-red);
+}
+
+.inactive-border {
+    border-bottom: 10px solid var(--angels-maroon);
 }
 
 .logo {
@@ -37,10 +42,6 @@
     z-index: 10;
 }
 
-.maroon {
-    background-color: var(--angels-maroon);
-}
-
 .tab:hover {
     background-color: var(--angels-red);
     color: white;
@@ -50,7 +51,6 @@
     .custom-navbar-container {
         height: 90px;
         justify-content: end;
-        border-color: var(--angels-maroon);
     }
     .logo {
         max-width: 80px;

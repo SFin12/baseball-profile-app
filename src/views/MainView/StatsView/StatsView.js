@@ -4,12 +4,15 @@ import { stats } from "../../../data/data";
 import { nanoid } from "nanoid";
 import "./StatsView.css";
 
-export default function StatsView() {
+export default function StatsView({ activateTab }) {
     const [topTen, setTopTen] = useState([]);
+
+    useEffect(() => {
+        activateTab("stats");
+    }, []);
 
     // create soreted array based based on most hits.
     function sortStats(type = "Hits") {
-        console.log(typeof stats[0][type]);
         let sortedStats = [];
         if (stats.length === 0) {
             return;
