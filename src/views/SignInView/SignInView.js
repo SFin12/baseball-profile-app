@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, FormControl } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import Card from "../../components/Card/Card";
+import "./SignInView.css";
 
 export default function SignInView({
     username,
@@ -10,10 +10,10 @@ export default function SignInView({
     handleLogin,
 }) {
     return (
-        <div className="d-flex align-items-center justify-content-center vh-100">
+        <div className="sign-in-container">
             {/* Custom card component not bootstrap component */}
             <Card>
-                <h2 className="text-dark mx-5">Baseball Profile</h2>
+                <h2 className="text-dark mx-5">Baseball Profile Login</h2>
                 <form className="d-flex flex-column" onSubmit={handleLogin}>
                     <label>Username</label>
                     <FormControl

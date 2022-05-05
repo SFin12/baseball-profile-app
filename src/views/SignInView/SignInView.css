@@ -1,0 +1,17 @@
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    padding-top: 20px;
+    background-image: url("../../assets/baseball-field-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .sign-in-container {
+        padding-top: 0px;
+        align-items: center;
+    }
+}
