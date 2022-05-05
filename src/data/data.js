@@ -1,3 +1,4 @@
+// Used for stats view.
 export const stats = [
     {
         Id: "001",
@@ -145,6 +146,7 @@ export const stats = [
     },
 ];
 
+// Used for tutorialsLayout.
 export const tutorials = [
     {
         type: "hitting",

@@ -7,7 +7,7 @@ import { Col, Row } from "react-bootstrap";
 
 export default function HomeView({ username, activateTab }) {
     useEffect(() => {
-        // Make sure home tab is activated
+        // Make sure home tab is activated when rendered.
         activateTab("home");
     }, []);
 

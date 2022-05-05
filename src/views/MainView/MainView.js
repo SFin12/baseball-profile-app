@@ -11,7 +11,7 @@ export default function MainView({ username }) {
     const [activeTab, setActiveTab] = useState("");
     const location = useLocation();
     useEffect(() => {
-        // Change active tab based on current url
+        // Change active tab based on current url the url is changed without clickong on tabs.
         switch (location.pathname) {
             case "/main":
                 setActiveTab("home");

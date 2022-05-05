@@ -4,7 +4,7 @@ import "./LoadingSpinner.css";
 
 export default function LoadingSpinner() {
     return (
-        <div className="loading-spinner-container">
+        <div className="center">
             <img
                 src={baseballSpinner}
                 className="baseball-loading-spinner"

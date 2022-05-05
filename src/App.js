@@ -19,11 +19,6 @@ function App() {
         }
     }
 
-    function resetSignInForm() {
-        setUsername("");
-        setPassword("");
-    }
-
     function handleLogin(e) {
         e.preventDefault();
         // Check to make sure someting is filled out to login.  Any username and password will work.

@@ -3,7 +3,8 @@
     height: auto;
 }
 
-.loading-spinner-container {
+/* Center spinner in center regardless of screen size */
+.center {
     position: fixed;
     top: 50%;
     left: 50%;
