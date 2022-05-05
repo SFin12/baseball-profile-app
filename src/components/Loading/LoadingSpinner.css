@@ -1,3 +1,18 @@
+.baseball-loading-spinner {
+    width: 150px;
+    height: auto;
+}
+
+.loading-spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -moz-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .baseball-loading-spinner {
         animation: spin infinite 1s linear;

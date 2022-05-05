@@ -5,7 +5,7 @@ import "./Footer.css";
 export default function Footer() {
     return (
         <footer className="custom-footer-container">
-            <span className="d-flex align-items-center">
+            <span className="d-flex px-3">
                 <a
                     href="http://google.com"
                     className="tab blue"

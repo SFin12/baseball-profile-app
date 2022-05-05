@@ -1,23 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { tutorials } from "../data/data";
 import { nanoid } from "nanoid";
 import { Col, Row } from "react-bootstrap";
+import LoadingSpinner from "../components/Loading/LoadingSpinner";
 import "./TutorialsLayout.css";
 
 export default function TutorialsLayout({ type, moduleName, activateTab }) {
-    // set to active tab
-    useEffect(() => {
-        activateTab("training");
-    }, []);
+    const [isLoading, setIsLoading] = useState(true);
 
-    // only get the hitting tutorials and sort them from first to last by their order.
+    useEffect(() => {
+        // Set to active tab.
+        activateTab("training");
+
+        // Simulate waiting for fetch response
+        setIsLoading(true);
+        setTimeout(() => setIsLoading(false), 700);
+    }, [type]);
+
+    // Only get the hitting tutorials and sort them from first to last by their order.
     const sortedTutorials = tutorials
         .filter((tutorial) => tutorial.type === type)
         .sort((current, next) => current.module - next.module);
 
-    return (
+    return isLoading ? (
+        <LoadingSpinner />
+    ) : (
         <div className="tutorials-container">
             <h1 className="pt-3 mt-md-3 mt-lg-1">{moduleName} Tutorials</h1>
+            {sortedTutorials.length === 0 && (
+                <h3 className="text-white">
+                    There are no {moduleName.toLowerCase()} tutorials to
+                    display.
+                </h3>
+            )}
             <section className="container d-flex justify-content-center flex-wrap align-items-center h-100 w-100 ">
                 <Row
                     lg={3}
@@ -27,6 +42,7 @@ export default function TutorialsLayout({ type, moduleName, activateTab }) {
                     className="text-center mb-md-5"
                 >
                     {sortedTutorials.map((tutorial, i) => {
+                        // Only display up to 6 videos
                         if (i < 6) {
                             return (
                                 <Col key={nanoid()}>
