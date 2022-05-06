@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/baseball-profile-app/static/css/main.32226735.css",
+    "main.css": "/baseball-profile-app/static/css/main.362fe307.css",
     "main.js": "/baseball-profile-app/static/js/main.8bf14329.js",
     "static/media/ronan.png": "/baseball-profile-app/static/media/ronan.22641a7d6fadb6bb1474.png",
     "static/media/baseball-field-background.jpg": "/baseball-profile-app/static/media/baseball-field-background.179e306647aa6b60a4fb.jpg",
@@ -8,11 +8,11 @@
     "static/media/angels-logo.png": "/baseball-profile-app/static/media/angels-logo.c7a3ece2ae4c90a1d02b.png",
     "static/media/baseballSpinner.png": "/baseball-profile-app/static/media/baseballSpinner.2d905ec98e237cbc4227.png",
     "index.html": "/baseball-profile-app/index.html",
-    "main.32226735.css.map": "/baseball-profile-app/static/css/main.32226735.css.map",
+    "main.362fe307.css.map": "/baseball-profile-app/static/css/main.362fe307.css.map",
     "main.8bf14329.js.map": "/baseball-profile-app/static/js/main.8bf14329.js.map"
   },
   "entrypoints": [
-    "static/css/main.32226735.css",
+    "static/css/main.362fe307.css",
     "static/js/main.8bf14329.js"
   ]
 }
