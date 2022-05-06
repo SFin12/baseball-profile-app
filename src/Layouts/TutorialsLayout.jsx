@@ -48,6 +48,7 @@ export default function TutorialsLayout({ type, moduleName, activateTab }) {
                                 <Col key={nanoid()}>
                                     <div className="m-3 text-white">
                                         <iframe
+                                            className="m-auto"
                                             src={tutorial.url}
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
